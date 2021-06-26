@@ -1,0 +1,5548 @@
+/* 
+
+TABLE OF CONTENTS
+
+1. Fonts
+ 1.1 Jura
+ 1.2 Megrim
+ 1.3 Rajdhani
+ 1.4 Raleway Dots
+ 1.5 Text Me One
+2. Mixins
+3. Variables
+4. Body 
+ 4.1 Content 
+  4.1.1 Section Blog 
+  4.1.2 Section Contact 
+  4.1.3 Section Earphones
+  4.1.4 Section Footer
+  4.1.5 Section React
+  4.1.6 Section Tools
+  4.1.7 Section UX/UI
+  4.1.8 Section Works
+  4.1.9 Work with Different Screen Sizes
+
+*/
+@font-face {
+  font-family: advent;
+  src: url("../Fonts/Advent/AdventPro-Regular.woff");
+}
+
+@font-face {
+  font-family: bsc;
+  src: url("../Fonts/Barlow/BarlowSemiCondensed-Regular.ttf");
+}
+
+@font-face {
+  font-family: abel;
+  src: url("../Fonts/Abel/Abel-Regular.ttf");
+}
+
+/* Body */
+body {
+  background: url("../Images/Body/Earth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow-x: hidden;
+  -webkit-background-size: cover;
+}
+
+body .dashboard_asia {
+  background: #353535;
+  height: 100vh;
+  opacity: 0.95;
+  width: 100vw;
+}
+
+body .dashboard_asia .content {
+  height: 100%;
+  width: 100%;
+}
+
+body .dashboard_asia .content .left {
+  background: #212121;
+  width: 10%;
+}
+
+body .dashboard_asia .content .left .comparative {
+  bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 10%;
+}
+
+body .dashboard_asia .content .left .comparative h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_asia .content .left h6 {
+  color: #ffffff;
+  font-family: abel;
+  font-size: 18px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+body .dashboard_asia .content .left .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 10%;
+}
+
+body .dashboard_asia .content .left .navbar .menu {
+  width: 100%;
+}
+
+body .dashboard_asia .content .left .navbar .menu a {
+  color: #ffffff;
+  display: block;
+  font-family: advent;
+  font-size: 24px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+body .dashboard_asia .content .left .navbar .menu a:hover {
+  background: #51D0EC;
+}
+
+body .dashboard_asia .content .left .navbar .menu .acti {
+  background: #51D0EC;
+}
+
+body .dashboard_asia .content .middle {
+  width: 60%;
+}
+
+body .dashboard_asia .content .middle .chart {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  height: 405px;
+  margin-top: 50px;
+  width: 800px;
+}
+
+body .dashboard_asia .content .middle .city {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+}
+
+body .dashboard_asia .content .middle .city a img {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  top: 3px;
+}
+
+body .dashboard_asia .content .middle .city h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_asia .content .middle .info_firstCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .dashboard_asia .content .middle .info_firstCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .dashboard_asia .content .middle .info_firstCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_asia .content .middle .info_secondCity {
+  display: none;
+}
+
+body .dashboard_asia .content .middle .info_secondCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .dashboard_asia .content .middle .info_secondCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .dashboard_asia .content .middle .info_secondCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_asia .content .middle .info_thirdCity {
+  display: none;
+}
+
+body .dashboard_asia .content .middle .info_thirdCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .dashboard_asia .content .middle .info_thirdCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .dashboard_asia .content .middle .info_thirdCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_asia .content .right {
+  background: #252525;
+  width: 30%;
+}
+
+body .dashboard_asia .content .right .valuesFirstCity .first {
+  margin-top: 50px;
+}
+
+body .dashboard_asia .content .right .valuesFirstCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .dashboard_asia .content .right .valuesFirstCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .dashboard_asia .content .right .valuesFirstCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .dashboard_asia .content .right .valuesFirstCity .value {
+  margin-top: 35px;
+}
+
+body .dashboard_asia .content .right .valuesSecondCity {
+  display: none;
+}
+
+body .dashboard_asia .content .right .valuesSecondCity .first {
+  margin-top: 50px;
+}
+
+body .dashboard_asia .content .right .valuesSecondCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .dashboard_asia .content .right .valuesSecondCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .dashboard_asia .content .right .valuesSecondCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .dashboard_asia .content .right .valuesSecondCity .value {
+  margin-top: 35px;
+}
+
+body .dashboard_asia .content .right .valuesThirdCity {
+  display: none;
+}
+
+body .dashboard_asia .content .right .valuesThirdCity .first {
+  margin-top: 50px;
+}
+
+body .dashboard_asia .content .right .valuesThirdCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .dashboard_asia .content .right .valuesThirdCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .dashboard_asia .content .right .valuesThirdCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .dashboard_asia .content .right .valuesThirdCity .value {
+  margin-top: 35px;
+}
+
+body .dashboard_europe {
+  background: #353535;
+  display: none;
+  height: 100vh;
+  opacity: 0.95;
+  width: 100vw;
+}
+
+body .dashboard_europe .content {
+  height: 100%;
+  width: 100%;
+}
+
+body .dashboard_europe .content .left {
+  background: #212121;
+  width: 10%;
+}
+
+body .dashboard_europe .content .left .comparative {
+  bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 10%;
+}
+
+body .dashboard_europe .content .left .comparative h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_europe .content .left h6 {
+  color: #ffffff;
+  font-family: abel;
+  font-size: 18px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+body .dashboard_europe .content .left .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 10%;
+}
+
+body .dashboard_europe .content .left .navbar .menu {
+  width: 100%;
+}
+
+body .dashboard_europe .content .left .navbar .menu a {
+  color: #ffffff;
+  display: block;
+  font-family: advent;
+  font-size: 24px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+body .dashboard_europe .content .left .navbar .menu a:hover {
+  background: #51D0EC;
+}
+
+body .dashboard_europe .content .left .navbar .menu .acti {
+  background: #51D0EC;
+}
+
+body .dashboard_europe .content .middle {
+  width: 60%;
+}
+
+body .dashboard_europe .content .middle .chart {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  height: 405px;
+  margin-top: 50px;
+  width: 800px;
+}
+
+body .dashboard_europe .content .middle .city {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+}
+
+body .dashboard_europe .content .middle .city a img {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  top: 3px;
+}
+
+body .dashboard_europe .content .middle .city h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_europe .content .middle .info_firstCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .dashboard_europe .content .middle .info_firstCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .dashboard_europe .content .middle .info_firstCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_europe .content .middle .info_secondCity {
+  display: none;
+}
+
+body .dashboard_europe .content .middle .info_secondCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .dashboard_europe .content .middle .info_secondCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .dashboard_europe .content .middle .info_secondCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_europe .content .middle .info_thirdCity {
+  display: none;
+}
+
+body .dashboard_europe .content .middle .info_thirdCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .dashboard_europe .content .middle .info_thirdCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .dashboard_europe .content .middle .info_thirdCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_europe .content .right {
+  background: #252525;
+  width: 30%;
+}
+
+body .dashboard_europe .content .right .valuesFirstCity .first {
+  margin-top: 50px;
+}
+
+body .dashboard_europe .content .right .valuesFirstCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .dashboard_europe .content .right .valuesFirstCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .dashboard_europe .content .right .valuesFirstCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .dashboard_europe .content .right .valuesFirstCity .value {
+  margin-top: 35px;
+}
+
+body .dashboard_europe .content .right .valuesSecondCity {
+  display: none;
+}
+
+body .dashboard_europe .content .right .valuesSecondCity .first {
+  margin-top: 50px;
+}
+
+body .dashboard_europe .content .right .valuesSecondCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .dashboard_europe .content .right .valuesSecondCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .dashboard_europe .content .right .valuesSecondCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .dashboard_europe .content .right .valuesSecondCity .value {
+  margin-top: 35px;
+}
+
+body .dashboard_europe .content .right .valuesThirdCity {
+  display: none;
+}
+
+body .dashboard_europe .content .right .valuesThirdCity .first {
+  margin-top: 50px;
+}
+
+body .dashboard_europe .content .right .valuesThirdCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .dashboard_europe .content .right .valuesThirdCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .dashboard_europe .content .right .valuesThirdCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .dashboard_europe .content .right .valuesThirdCity .value {
+  margin-top: 35px;
+}
+
+body .dashboard_usa {
+  background: #353535;
+  display: none;
+  height: 100vh;
+  opacity: 0.95;
+  width: 100vw;
+}
+
+body .dashboard_usa .content {
+  height: 100%;
+  width: 100%;
+}
+
+body .dashboard_usa .content .left {
+  background: #212121;
+  width: 10%;
+}
+
+body .dashboard_usa .content .left .comparative {
+  bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 10%;
+}
+
+body .dashboard_usa .content .left .comparative h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_usa .content .left h6 {
+  color: #ffffff;
+  font-family: abel;
+  font-size: 18px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+body .dashboard_usa .content .left .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 10%;
+}
+
+body .dashboard_usa .content .left .navbar .menu {
+  width: 100%;
+}
+
+body .dashboard_usa .content .left .navbar .menu a {
+  color: #ffffff;
+  display: block;
+  font-family: advent;
+  font-size: 24px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+body .dashboard_usa .content .left .navbar .menu a:hover {
+  background: #51D0EC;
+}
+
+body .dashboard_usa .content .left .navbar .menu .acti {
+  background: #51D0EC;
+}
+
+body .dashboard_usa .content .middle {
+  width: 60%;
+}
+
+body .dashboard_usa .content .middle .chart {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  height: 405px;
+  margin-top: 50px;
+  width: 800px;
+}
+
+body .dashboard_usa .content .middle .city {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+}
+
+body .dashboard_usa .content .middle .city a img {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  top: 3px;
+}
+
+body .dashboard_usa .content .middle .city h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_usa .content .middle .info_firstCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .dashboard_usa .content .middle .info_firstCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .dashboard_usa .content .middle .info_firstCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_usa .content .middle .info_secondCity {
+  display: none;
+}
+
+body .dashboard_usa .content .middle .info_secondCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .dashboard_usa .content .middle .info_secondCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .dashboard_usa .content .middle .info_secondCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_usa .content .middle .info_thirdCity {
+  display: none;
+}
+
+body .dashboard_usa .content .middle .info_thirdCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .dashboard_usa .content .middle .info_thirdCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .dashboard_usa .content .middle .info_thirdCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .dashboard_usa .content .right {
+  background: #252525;
+  width: 30%;
+}
+
+body .dashboard_usa .content .right .valuesFirstCity .first {
+  margin-top: 50px;
+}
+
+body .dashboard_usa .content .right .valuesFirstCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .dashboard_usa .content .right .valuesFirstCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .dashboard_usa .content .right .valuesFirstCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .dashboard_usa .content .right .valuesFirstCity .value {
+  margin-top: 35px;
+}
+
+body .dashboard_usa .content .right .valuesSecondCity {
+  display: none;
+}
+
+body .dashboard_usa .content .right .valuesSecondCity .first {
+  margin-top: 50px;
+}
+
+body .dashboard_usa .content .right .valuesSecondCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .dashboard_usa .content .right .valuesSecondCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .dashboard_usa .content .right .valuesSecondCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .dashboard_usa .content .right .valuesSecondCity .value {
+  margin-top: 35px;
+}
+
+body .dashboard_usa .content .right .valuesThirdCity {
+  display: none;
+}
+
+body .dashboard_usa .content .right .valuesThirdCity .first {
+  margin-top: 50px;
+}
+
+body .dashboard_usa .content .right .valuesThirdCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .dashboard_usa .content .right .valuesThirdCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .dashboard_usa .content .right .valuesThirdCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .dashboard_usa .content .right .valuesThirdCity .value {
+  margin-top: 35px;
+}
+
+body .greenhouse_asia {
+  background: #353535;
+  display: none;
+  height: 100vh;
+  opacity: 0.95;
+  width: 100vw;
+}
+
+body .greenhouse_asia .content {
+  height: 100%;
+  width: 100%;
+}
+
+body .greenhouse_asia .content .left {
+  background: #212121;
+  width: 10%;
+}
+
+body .greenhouse_asia .content .left .comparative {
+  bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 10%;
+}
+
+body .greenhouse_asia .content .left .comparative h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body .greenhouse_asia .content .left h6 {
+  color: #ffffff;
+  font-family: abel;
+  font-size: 18px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+body .greenhouse_asia .content .left .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 10%;
+}
+
+body .greenhouse_asia .content .left .navbar .menu {
+  width: 100%;
+}
+
+body .greenhouse_asia .content .left .navbar .menu a {
+  color: #ffffff;
+  display: block;
+  font-family: advent;
+  font-size: 24px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+body .greenhouse_asia .content .left .navbar .menu a:hover {
+  background: #51D0EC;
+}
+
+body .greenhouse_asia .content .left .navbar .menu .acti {
+  background: #51D0EC;
+}
+
+body .greenhouse_asia .content .middle {
+  width: 60%;
+}
+
+body .greenhouse_asia .content .middle .chart {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  height: 405px;
+  margin-top: 50px;
+  width: 800px;
+}
+
+body .greenhouse_asia .content .middle .city {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+}
+
+body .greenhouse_asia .content .middle .city a img {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  top: 3px;
+}
+
+body .greenhouse_asia .content .middle .city h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .greenhouse_asia .content .middle .info_firstCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .greenhouse_asia .content .middle .info_firstCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .greenhouse_asia .content .middle .info_firstCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .greenhouse_asia .content .middle .info_secondCity {
+  display: none;
+}
+
+body .greenhouse_asia .content .middle .info_secondCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .greenhouse_asia .content .middle .info_secondCity .heading a {
+  cursor: pointer;
+}
+
+body .greenhouse_asia .content .middle .info_secondCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .greenhouse_asia .content .middle .info_secondCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .greenhouse_asia .content .middle .info_thirdCity {
+  display: none;
+}
+
+body .greenhouse_asia .content .middle .info_thirdCity .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .greenhouse_asia .content .middle .info_thirdCity .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .greenhouse_asia .content .middle .info_thirdCity .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .greenhouse_asia .content .right {
+  background: #252525;
+  width: 30%;
+}
+
+body .greenhouse_asia .content .right .valuesFirstCity .first {
+  margin-top: 50px;
+}
+
+body .greenhouse_asia .content .right .valuesFirstCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .greenhouse_asia .content .right .valuesFirstCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .greenhouse_asia .content .right .valuesFirstCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .greenhouse_asia .content .right .valuesFirstCity .value {
+  margin-top: 35px;
+}
+
+body .greenhouse_asia .content .right .valuesSecondCity {
+  display: none;
+}
+
+body .greenhouse_asia .content .right .valuesSecondCity .first {
+  margin-top: 50px;
+}
+
+body .greenhouse_asia .content .right .valuesSecondCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .greenhouse_asia .content .right .valuesSecondCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .greenhouse_asia .content .right .valuesSecondCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .greenhouse_asia .content .right .valuesSecondCity .value {
+  margin-top: 35px;
+}
+
+body .greenhouse_asia .content .right .valuesThirdCity {
+  display: none;
+}
+
+body .greenhouse_asia .content .right .valuesThirdCity .first {
+  margin-top: 50px;
+}
+
+body .greenhouse_asia .content .right .valuesThirdCity h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .greenhouse_asia .content .right .valuesThirdCity h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .greenhouse_asia .content .right .valuesThirdCity h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .greenhouse_asia .content .right .valuesThirdCity .value {
+  margin-top: 35px;
+}
+
+body .greenhouse_usa {
+  background: #353535;
+  display: none;
+  height: 100vh;
+  opacity: 0.95;
+  width: 100vw;
+}
+
+body .greenhouse_usa .content {
+  height: 100%;
+  width: 100%;
+}
+
+body .greenhouse_usa .content .left {
+  background: #212121;
+  width: 10%;
+}
+
+body .greenhouse_usa .content .left .comparative {
+  bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  width: 10%;
+}
+
+body .greenhouse_usa .content .left .comparative h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body .greenhouse_usa .content .left h6 {
+  color: #ffffff;
+  font-family: abel;
+  font-size: 18px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+body .greenhouse_usa .content .left .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 10%;
+}
+
+body .greenhouse_usa .content .left .navbar .menu {
+  width: 100%;
+}
+
+body .greenhouse_usa .content .left .navbar .menu a {
+  color: #ffffff;
+  display: block;
+  font-family: advent;
+  font-size: 24px;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+body .greenhouse_usa .content .left .navbar .menu a:hover {
+  background: #51D0EC;
+}
+
+body .greenhouse_usa .content .left .navbar .menu .acti {
+  background: #51D0EC;
+}
+
+body .greenhouse_usa .content .middle {
+  width: 60%;
+}
+
+body .greenhouse_usa .content .middle .chart {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  height: 405px;
+  margin-top: 50px;
+  width: 800px;
+}
+
+body .greenhouse_usa .content .middle .city {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 25px;
+}
+
+body .greenhouse_usa .content .middle .city a img {
+  display: inline-block;
+  margin-left: 20px;
+  position: relative;
+  top: 3px;
+}
+
+body .greenhouse_usa .content .middle .city h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .greenhouse_usa .content .middle .info_NY .heading {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .greenhouse_usa .content .middle .info_NY .heading a img {
+  display: inline;
+  margin-left: 25px;
+  position: relative;
+  top: 7px;
+}
+
+body .greenhouse_usa .content .middle .info_NY .heading h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+body .greenhouse_usa .content .right {
+  background: #252525;
+  width: 30%;
+}
+
+body .greenhouse_usa .content .right .valuesNY .first {
+  margin-top: 50px;
+}
+
+body .greenhouse_usa .content .right .valuesNY h1 {
+  color: #ffffff;
+  font-family: bsc;
+  font-size: 64px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  font-family: advent;
+  font-size: 48px;
+}
+
+body .greenhouse_usa .content .right .valuesNY h2 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 36px;
+  margin: 0;
+  text-align: center;
+}
+
+body .greenhouse_usa .content .right .valuesNY h3 {
+  color: #ffffff;
+  font-family: advent;
+  font-size: 30px;
+  text-align: center;
+}
+
+body .greenhouse_usa .content .right .valuesNY .value {
+  margin-top: 35px;
+}
+
+@media (max-width: 350px) {
+  body .dashboard_asia {
+    height: initial;
+  }
+  body .dashboard_asia .content {
+    height: initial;
+  }
+  body .dashboard_asia .content .left {
+    width: 100%;
+  }
+  body .dashboard_asia .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .dashboard_asia .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .dashboard_asia .content .left h6 {
+    margin-top: 15px;
+  }
+  body .dashboard_asia .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .dashboard_asia .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .dashboard_asia .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_asia .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_asia .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_asia .content .middle {
+    width: 100%;
+  }
+  body .dashboard_asia .content .middle .chart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  body .dashboard_asia .content .middle .chart img {
+    height: auto;
+    width: 90%;
+  }
+  body .dashboard_asia .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading h1 {
+    font-size: 50px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading h1 {
+    font-size: 50px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading h1 {
+    font-size: 50px;
+  }
+  body .dashboard_asia .content .right {
+    width: 100%;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h1 {
+    font-size: 40px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h1 {
+    font-size: 40px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h1 {
+    font-size: 40px;
+  }
+  body .dashboard_europe {
+    height: initial;
+  }
+  body .dashboard_europe .content {
+    height: initial;
+  }
+  body .dashboard_europe .content .left {
+    width: 100%;
+  }
+  body .dashboard_europe .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .dashboard_europe .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .dashboard_europe .content .left h6 {
+    margin-top: 15px;
+  }
+  body .dashboard_europe .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .dashboard_europe .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .dashboard_europe .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_europe .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_europe .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_europe .content .middle {
+    width: 100%;
+  }
+  body .dashboard_europe .content .middle .chart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  body .dashboard_europe .content .middle .chart img {
+    height: auto;
+    width: 90%;
+  }
+  body .dashboard_europe .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading h1 {
+    font-size: 50px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading h1 {
+    font-size: 50px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading h1 {
+    font-size: 50px;
+  }
+  body .dashboard_europe .content .right {
+    width: 100%;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h1 {
+    font-size: 40px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h1 {
+    font-size: 40px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h1 {
+    font-size: 40px;
+  }
+  body .dashboard_usa {
+    height: initial;
+  }
+  body .dashboard_usa .content {
+    height: initial;
+  }
+  body .dashboard_usa .content .left {
+    width: 100%;
+  }
+  body .dashboard_usa .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .dashboard_usa .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .dashboard_usa .content .left h6 {
+    margin-top: 15px;
+  }
+  body .dashboard_usa .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .dashboard_usa .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .dashboard_usa .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_usa .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_usa .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_usa .content .middle {
+    width: 100%;
+  }
+  body .dashboard_usa .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 90%;
+  }
+  body .dashboard_usa .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading h1 {
+    font-size: 50px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading h1 {
+    font-size: 50px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading h1 {
+    font-size: 50px;
+  }
+  body .dashboard_usa .content .right {
+    width: 100%;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h1 {
+    font-size: 40px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h1 {
+    font-size: 40px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h1 {
+    font-size: 40px;
+  }
+  body .greenhouse_asia {
+    height: initial;
+  }
+  body .greenhouse_asia .content {
+    height: initial;
+  }
+  body .greenhouse_asia .content .left {
+    width: 100%;
+  }
+  body .greenhouse_asia .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .greenhouse_asia .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .greenhouse_asia .content .left h6 {
+    margin-top: 15px;
+  }
+  body .greenhouse_asia .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .greenhouse_asia .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .greenhouse_asia .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_asia .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_asia .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_asia .content .middle {
+    width: 100%;
+  }
+  body .greenhouse_asia .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 90%;
+  }
+  body .greenhouse_asia .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading h1 {
+    font-size: 50px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading h1 {
+    font-size: 50px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading h1 {
+    font-size: 50px;
+  }
+  body .greenhouse_asia .content .right {
+    width: 100%;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h1 {
+    font-size: 40px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h1 {
+    font-size: 40px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h1 {
+    font-size: 40px;
+  }
+  body .greenhouse_usa {
+    height: initial;
+  }
+  body .greenhouse_usa .content {
+    height: initial;
+  }
+  body .greenhouse_usa .content .left {
+    width: 100%;
+  }
+  body .greenhouse_usa .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .greenhouse_usa .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .greenhouse_usa .content .left h6 {
+    margin-top: 15px;
+  }
+  body .greenhouse_usa .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .greenhouse_usa .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .greenhouse_usa .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_usa .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_usa .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_usa .content .middle {
+    width: 100%;
+  }
+  body .greenhouse_usa .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 90%;
+  }
+  body .greenhouse_usa .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_usa .content .middle .info_NY {
+    margin-top: 20px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading h1 {
+    font-size: 50px;
+  }
+  body .greenhouse_usa .content .right {
+    width: 100%;
+  }
+  body .greenhouse_usa .content .right .valuesNY {
+    margin-top: 20px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h1 {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 351px) and (max-width: 650px) {
+  body .dashboard_asia {
+    height: initial;
+  }
+  body .dashboard_asia .content {
+    height: initial;
+  }
+  body .dashboard_asia .content .left {
+    width: 100%;
+  }
+  body .dashboard_asia .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .dashboard_asia .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .dashboard_asia .content .left h6 {
+    margin-top: 15px;
+  }
+  body .dashboard_asia .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .dashboard_asia .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .dashboard_asia .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_asia .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_asia .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_asia .content .middle {
+    width: 100%;
+  }
+  body .dashboard_asia .content .middle .chart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  body .dashboard_asia .content .middle .chart img {
+    height: auto;
+    width: 90%;
+  }
+  body .dashboard_asia .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .right {
+    width: 100%;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_europe {
+    height: initial;
+  }
+  body .dashboard_europe .content {
+    height: initial;
+  }
+  body .dashboard_europe .content .left {
+    width: 100%;
+  }
+  body .dashboard_europe .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .dashboard_europe .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .dashboard_europe .content .left h6 {
+    margin-top: 15px;
+  }
+  body .dashboard_europe .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .dashboard_europe .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .dashboard_europe .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_europe .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_europe .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_europe .content .middle {
+    width: 100%;
+  }
+  body .dashboard_europe .content .middle .chart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  body .dashboard_europe .content .middle .chart img {
+    height: auto;
+    width: 90%;
+  }
+  body .dashboard_europe .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .right {
+    width: 100%;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_usa {
+    height: initial;
+  }
+  body .dashboard_usa .content {
+    height: initial;
+  }
+  body .dashboard_usa .content .left {
+    width: 100%;
+  }
+  body .dashboard_usa .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .dashboard_usa .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .dashboard_usa .content .left h6 {
+    margin-top: 15px;
+  }
+  body .dashboard_usa .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .dashboard_usa .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .dashboard_usa .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_usa .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_usa .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_usa .content .middle {
+    width: 100%;
+  }
+  body .dashboard_usa .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 90%;
+  }
+  body .dashboard_usa .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .right {
+    width: 100%;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_asia {
+    height: initial;
+  }
+  body .greenhouse_asia .content {
+    height: initial;
+  }
+  body .greenhouse_asia .content .left {
+    width: 100%;
+  }
+  body .greenhouse_asia .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .greenhouse_asia .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .greenhouse_asia .content .left h6 {
+    margin-top: 15px;
+  }
+  body .greenhouse_asia .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .greenhouse_asia .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .greenhouse_asia .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_asia .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_asia .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_asia .content .middle {
+    width: 100%;
+  }
+  body .greenhouse_asia .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 90%;
+  }
+  body .greenhouse_asia .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .right {
+    width: 100%;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_usa {
+    height: initial;
+  }
+  body .greenhouse_usa .content {
+    height: initial;
+  }
+  body .greenhouse_usa .content .left {
+    width: 100%;
+  }
+  body .greenhouse_usa .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .greenhouse_usa .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .greenhouse_usa .content .left h6 {
+    margin-top: 15px;
+  }
+  body .greenhouse_usa .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .greenhouse_usa .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .greenhouse_usa .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_usa .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_usa .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_usa .content .middle {
+    width: 100%;
+  }
+  body .greenhouse_usa .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 90%;
+  }
+  body .greenhouse_usa .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_usa .content .middle .info_NY {
+    margin-top: 20px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_usa .content .right {
+    width: 100%;
+  }
+  body .greenhouse_usa .content .right .valuesNY {
+    margin-top: 20px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .bottom {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 651px) and (max-width: 1199px) {
+  body .dashboard_asia {
+    height: initial;
+  }
+  body .dashboard_asia .content {
+    height: initial;
+  }
+  body .dashboard_asia .content .left {
+    width: 100%;
+  }
+  body .dashboard_asia .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .dashboard_asia .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .dashboard_asia .content .left h6 {
+    margin-top: 15px;
+  }
+  body .dashboard_asia .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .dashboard_asia .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .dashboard_asia .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_asia .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_asia .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_asia .content .middle {
+    width: 100%;
+  }
+  body .dashboard_asia .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 600px;
+  }
+  body .dashboard_asia .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .right {
+    width: 100%;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_europe {
+    height: initial;
+  }
+  body .dashboard_europe .content {
+    height: initial;
+  }
+  body .dashboard_europe .content .left {
+    width: 100%;
+  }
+  body .dashboard_europe .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .dashboard_europe .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .dashboard_europe .content .left h6 {
+    margin-top: 15px;
+  }
+  body .dashboard_europe .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .dashboard_europe .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .dashboard_europe .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_europe .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_europe .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_europe .content .middle {
+    width: 100%;
+  }
+  body .dashboard_europe .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 600px;
+  }
+  body .dashboard_europe .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .right {
+    width: 100%;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_usa {
+    height: initial;
+  }
+  body .dashboard_usa .content {
+    height: initial;
+  }
+  body .dashboard_usa .content .left {
+    width: 100%;
+  }
+  body .dashboard_usa .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .dashboard_usa .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .dashboard_usa .content .left h6 {
+    margin-top: 15px;
+  }
+  body .dashboard_usa .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .dashboard_usa .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .dashboard_usa .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_usa .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_usa .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .dashboard_usa .content .middle {
+    width: 100%;
+  }
+  body .dashboard_usa .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 600px;
+  }
+  body .dashboard_usa .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .right {
+    width: 100%;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_asia {
+    height: initial;
+  }
+  body .greenhouse_asia .content {
+    height: initial;
+  }
+  body .greenhouse_asia .content .left {
+    width: 100%;
+  }
+  body .greenhouse_asia .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .greenhouse_asia .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .greenhouse_asia .content .left h6 {
+    margin-top: 15px;
+  }
+  body .greenhouse_asia .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .greenhouse_asia .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .greenhouse_asia .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_asia .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_asia .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_asia .content .middle {
+    width: 100%;
+  }
+  body .greenhouse_asia .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 600px;
+  }
+  body .greenhouse_asia .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .right {
+    width: 100%;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity {
+    margin-top: 20px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .bottom {
+    margin-bottom: 20px;
+  }
+  body .greenhouse_usa {
+    height: initial;
+  }
+  body .greenhouse_usa .content {
+    height: initial;
+  }
+  body .greenhouse_usa .content .left {
+    width: 100%;
+  }
+  body .greenhouse_usa .content .left .comparative {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  body .greenhouse_usa .content .left .comparative h6 {
+    margin-bottom: 15px;
+  }
+  body .greenhouse_usa .content .left h6 {
+    margin-top: 15px;
+  }
+  body .greenhouse_usa .content .left .header_hamburger {
+    visibility: visible;
+  }
+  body .greenhouse_usa .content .left .navbar {
+    background: black;
+    height: initial;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+  body .greenhouse_usa .content .left .navbar .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_usa .content .left .navbar .menu div {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_usa .content .left .navbar .menu div a {
+    margin: 0;
+    padding: 0;
+  }
+  body .greenhouse_usa .content .middle {
+    width: 100%;
+  }
+  body .greenhouse_usa .content .middle .chart {
+    height: auto;
+    margin-bottom: 40px;
+    width: 600px;
+  }
+  body .greenhouse_usa .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_usa .content .middle .info_NY {
+    margin-top: 20px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_usa .content .right {
+    width: 100%;
+  }
+  body .greenhouse_usa .content .right .valuesNY {
+    margin-top: 20px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .bottom {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1500px) {
+  body .dashboard_asia .content .middle .chart {
+    height: auto;
+    width: 600px;
+  }
+  body .dashboard_asia .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .chart {
+    height: auto;
+    width: 600px;
+  }
+  body .dashboard_europe .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .chart {
+    height: auto;
+    width: 600px;
+  }
+  body .dashboard_usa .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .chart {
+    height: auto;
+    width: 600px;
+  }
+  body .greenhouse_asia .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_usa .content .middle .chart {
+    height: auto;
+    width: 600px;
+  }
+  body .greenhouse_usa .content .middle .city {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 2400px) {
+  body .dashboard_asia .content .left .comparative {
+    bottom: 62px;
+  }
+  body .dashboard_asia .content .left h6 {
+    font-size: 22px;
+    margin-top: 62px;
+  }
+  body .dashboard_asia .content .left .navbar .menu a {
+    font-size: 30px;
+    padding: 12.5px;
+  }
+  body .dashboard_asia .content .middle .chart {
+    border-radius: 18px;
+    height: 506px;
+    margin-top: 62px;
+    width: 1000px;
+  }
+  body .dashboard_asia .content .middle .chart img {
+    height: auto;
+    width: 1000px;
+  }
+  body .dashboard_asia .content .middle .city {
+    margin-top: 31px;
+  }
+  body .dashboard_asia .content .middle .city a img {
+    height: auto;
+    margin-left: 25px;
+    top: 3.7px;
+    width: 25px;
+  }
+  body .dashboard_asia .content .middle .city h2 {
+    font-size: 45px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading h1 {
+    font-size: 80px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading h1 {
+    font-size: 80px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading h1 {
+    font-size: 80px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .first {
+    margin-top: 62px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h1 {
+    font-size: 60px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h2 {
+    font-size: 45px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h3 {
+    font-size: 37px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .value {
+    margin-top: 43px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .first {
+    margin-top: 62px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h1 {
+    font-size: 60px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h2 {
+    font-size: 45px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h3 {
+    font-size: 37px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .value {
+    margin-top: 43px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .first {
+    margin-top: 62px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h1 {
+    font-size: 60px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h2 {
+    font-size: 45px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h3 {
+    font-size: 37px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .value {
+    margin-top: 43px;
+  }
+  body .dashboard_europe .content .left .comparative {
+    bottom: 62px;
+  }
+  body .dashboard_europe .content .left h6 {
+    font-size: 22px;
+    margin-top: 62px;
+  }
+  body .dashboard_europe .content .left .navbar .menu a {
+    font-size: 30px;
+    padding: 12.5px;
+  }
+  body .dashboard_europe .content .middle .chart {
+    border-radius: 18px;
+    height: 506px;
+    margin-top: 62px;
+    width: 1000px;
+  }
+  body .dashboard_europe .content .middle .chart img {
+    height: auto;
+    width: 1000px;
+  }
+  body .dashboard_europe .content .middle .city {
+    margin-top: 31px;
+  }
+  body .dashboard_europe .content .middle .city a img {
+    height: auto;
+    margin-left: 25px;
+    top: 3.7px;
+    width: 25px;
+  }
+  body .dashboard_europe .content .middle .city h2 {
+    font-size: 45px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading h1 {
+    font-size: 80px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading h1 {
+    font-size: 80px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading h1 {
+    font-size: 80px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .first {
+    margin-top: 62px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h1 {
+    font-size: 60px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h2 {
+    font-size: 45px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h3 {
+    font-size: 37px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .value {
+    margin-top: 43px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .first {
+    margin-top: 62px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h1 {
+    font-size: 60px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h2 {
+    font-size: 45px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h3 {
+    font-size: 37px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .value {
+    margin-top: 43px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .first {
+    margin-top: 62px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h1 {
+    font-size: 60px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h2 {
+    font-size: 45px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h3 {
+    font-size: 37px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .value {
+    margin-top: 43px;
+  }
+  body .dashboard_usa .content .left .comparative {
+    bottom: 62px;
+  }
+  body .dashboard_usa .content .left h6 {
+    font-size: 22px;
+    margin-top: 62px;
+  }
+  body .dashboard_usa .content .left .navbar .menu a {
+    font-size: 30px;
+    padding: 12.5px;
+  }
+  body .dashboard_usa .content .middle .chart {
+    border-radius: 18px;
+    height: 506px;
+    margin-top: 62px;
+    width: 1000px;
+  }
+  body .dashboard_usa .content .middle .chart img {
+    height: auto;
+    width: 1000px;
+  }
+  body .dashboard_usa .content .middle .city {
+    margin-top: 31px;
+  }
+  body .dashboard_usa .content .middle .city a img {
+    height: auto;
+    margin-left: 25px;
+    top: 3.7px;
+    width: 25px;
+  }
+  body .dashboard_usa .content .middle .city h2 {
+    font-size: 45px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading h1 {
+    font-size: 80px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading h1 {
+    font-size: 80px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading h1 {
+    font-size: 80px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .first {
+    margin-top: 62px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h1 {
+    font-size: 60px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h2 {
+    font-size: 45px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h3 {
+    font-size: 37px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .value {
+    margin-top: 43px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .first {
+    margin-top: 62px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h1 {
+    font-size: 60px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h2 {
+    font-size: 45px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h3 {
+    font-size: 37px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .value {
+    margin-top: 43px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .first {
+    margin-top: 62px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h1 {
+    font-size: 80px;
+    font-size: 60px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h2 {
+    font-size: 45px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h3 {
+    font-size: 37px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .value {
+    margin-top: 43px;
+  }
+  body .greenhouse_asia .content .left .comparative {
+    bottom: 62px;
+  }
+  body .greenhouse_asia .content .left h6 {
+    font-size: 22px;
+    margin-top: 62px;
+  }
+  body .greenhouse_asia .content .left .navbar .menu a {
+    font-size: 30px;
+    padding: 12.5px;
+  }
+  body .greenhouse_asia .content .middle .chart {
+    border-radius: 18px;
+    height: 506px;
+    margin-top: 62px;
+    width: 1000px;
+  }
+  body .greenhouse_asia .content .middle .chart img {
+    height: auto;
+    width: 1000px;
+  }
+  body .greenhouse_asia .content .middle .city {
+    margin-top: 31px;
+  }
+  body .greenhouse_asia .content .middle .city a img {
+    height: auto;
+    margin-left: 25px;
+    top: 3.7px;
+    width: 25px;
+  }
+  body .greenhouse_asia .content .middle .city h2 {
+    font-size: 45px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading h1 {
+    font-size: 80px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading h1 {
+    font-size: 80px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading h1 {
+    font-size: 80px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .first {
+    margin-top: 62px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h1 {
+    font-size: 60px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h2 {
+    font-size: 45px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h3 {
+    font-size: 37px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .value {
+    margin-top: 43px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity {
+    display: none;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .first {
+    margin-top: 62px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h1 {
+    font-size: 60px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h2 {
+    font-size: 45px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h3 {
+    font-size: 37px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .value {
+    margin-top: 43px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .first {
+    margin-top: 62px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h1 {
+    font-size: 60px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h2 {
+    font-size: 45px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h3 {
+    font-size: 37px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .value {
+    margin-top: 43px;
+  }
+  body .greenhouse_usa .content .left .comparative {
+    bottom: 62px;
+  }
+  body .greenhouse_usa .content .left h6 {
+    font-size: 22px;
+    margin-top: 62px;
+  }
+  body .greenhouse_usa .content .left .navbar .menu a {
+    font-size: 30px;
+  }
+  body .greenhouse_usa .content .middle .chart {
+    border-radius: 18px;
+    height: 506px;
+    margin-top: 62px;
+    width: 1000px;
+  }
+  body .greenhouse_usa .content .middle .chart img {
+    height: auto;
+    width: 1000px;
+  }
+  body .greenhouse_usa .content .middle .city {
+    margin-top: 31px;
+  }
+  body .greenhouse_usa .content .middle .city a img {
+    height: auto;
+    margin-left: 25px;
+    top: 3.7px;
+    width: 25px;
+  }
+  body .greenhouse_usa .content .middle .city h2 {
+    font-size: 45px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading a img {
+    height: auto;
+    margin-left: 31px;
+    top: 8.7px;
+    width: 43px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading h1 {
+    font-size: 80px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .first {
+    margin-top: 62px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h1 {
+    font-size: 60px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h2 {
+    font-size: 45px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h3 {
+    font-size: 37px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .value {
+    margin-top: 43px;
+  }
+}
+
+@media (min-width: 2401px) and (max-width: 3000px) {
+  body .dashboard_asia .content .left .comparative {
+    bottom: 77px;
+  }
+  body .dashboard_asia .content .left h6 {
+    font-size: 27px;
+    margin-top: 77px;
+  }
+  body .dashboard_asia .content .left .navbar .menu a {
+    font-size: 37px;
+    padding: 15.6px;
+  }
+  body .dashboard_asia .content .middle .chart {
+    border-radius: 22px;
+    height: 633px;
+    margin-top: 77px;
+    width: 1250px;
+  }
+  body .dashboard_asia .content .middle .chart img {
+    height: auto;
+    width: 1250px;
+  }
+  body .dashboard_asia .content .middle .city {
+    margin-top: 38px;
+  }
+  body .dashboard_asia .content .middle .city a img {
+    height: auto;
+    margin-left: 31px;
+    top: 4.6px;
+    width: 31px;
+  }
+  body .dashboard_asia .content .middle .city h2 {
+    font-size: 56px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading h1 {
+    font-size: 100px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading h1 {
+    font-size: 100px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading h1 {
+    font-size: 100px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .first {
+    margin-top: 77px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h1 {
+    font-size: 75px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h2 {
+    font-size: 56px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h3 {
+    font-size: 46px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .value {
+    margin-top: 53px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .first {
+    margin-top: 77px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h1 {
+    font-size: 75px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h2 {
+    font-size: 56px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h3 {
+    font-size: 46px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .value {
+    margin-top: 53px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .first {
+    margin-top: 77px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h1 {
+    font-size: 75px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h2 {
+    font-size: 56px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h3 {
+    font-size: 46px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .value {
+    margin-top: 53px;
+  }
+  body .dashboard_europe .content .left .comparative {
+    bottom: 77px;
+  }
+  body .dashboard_europe .content .left h6 {
+    font-size: 27px;
+    margin-top: 77px;
+  }
+  body .dashboard_europe .content .left .navbar .menu a {
+    font-size: 37px;
+    padding: 15.6px;
+  }
+  body .dashboard_europe .content .middle .chart {
+    border-radius: 22px;
+    height: 633px;
+    margin-top: 77px;
+    width: 1250px;
+  }
+  body .dashboard_europe .content .middle .chart img {
+    height: auto;
+    width: 1250px;
+  }
+  body .dashboard_europe .content .middle .city {
+    margin-top: 38px;
+  }
+  body .dashboard_europe .content .middle .city a img {
+    height: auto;
+    margin-left: 31px;
+    top: 4.6px;
+    width: 31px;
+  }
+  body .dashboard_europe .content .middle .city h2 {
+    font-size: 56px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading h1 {
+    font-size: 100px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading h1 {
+    font-size: 100px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading h1 {
+    font-size: 100px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .first {
+    margin-top: 77px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h1 {
+    font-size: 75px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h2 {
+    font-size: 56px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h3 {
+    font-size: 46px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .value {
+    margin-top: 53px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .first {
+    margin-top: 77px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h1 {
+    font-size: 75px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h2 {
+    font-size: 56px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h3 {
+    font-size: 46px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .value {
+    margin-top: 53px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .first {
+    margin-top: 77px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h1 {
+    font-size: 75px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h2 {
+    font-size: 56px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h3 {
+    font-size: 46px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .value {
+    margin-top: 53px;
+  }
+  body .dashboard_usa .content .left .comparative {
+    bottom: 77px;
+  }
+  body .dashboard_usa .content .left h6 {
+    font-size: 27px;
+    margin-top: 77px;
+  }
+  body .dashboard_usa .content .left .navbar .menu a {
+    font-size: 37px;
+    padding: 15.6px;
+  }
+  body .dashboard_usa .content .middle .chart {
+    border-radius: 22px;
+    height: 633px;
+    margin-top: 77px;
+    width: 1250px;
+  }
+  body .dashboard_usa .content .middle .chart img {
+    height: auto;
+    width: 1250px;
+  }
+  body .dashboard_usa .content .middle .city {
+    margin-top: 38px;
+  }
+  body .dashboard_usa .content .middle .city a img {
+    height: auto;
+    margin-left: 31px;
+    top: 4.6px;
+    width: 31px;
+  }
+  body .dashboard_usa .content .middle .city h2 {
+    font-size: 56px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading h1 {
+    font-size: 100px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading h1 {
+    font-size: 100px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading h1 {
+    font-size: 100px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .first {
+    margin-top: 77px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h1 {
+    font-size: 75px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h2 {
+    font-size: 56px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h3 {
+    font-size: 46px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .value {
+    margin-top: 53px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .first {
+    margin-top: 77px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h1 {
+    font-size: 75px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h2 {
+    font-size: 56px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h3 {
+    font-size: 46px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .value {
+    margin-top: 53px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .first {
+    margin-top: 77px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h1 {
+    font-size: 100px;
+    font-size: 75px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h2 {
+    font-size: 56px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h3 {
+    font-size: 46px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .value {
+    margin-top: 53px;
+  }
+  body .greenhouse_asia .content .left .comparative {
+    bottom: 77px;
+  }
+  body .greenhouse_asia .content .left h6 {
+    font-size: 27px;
+    margin-top: 77px;
+  }
+  body .greenhouse_asia .content .left .navbar .menu a {
+    font-size: 37px;
+    padding: 15.6px;
+  }
+  body .greenhouse_asia .content .middle .chart {
+    border-radius: 22px;
+    height: 633px;
+    margin-top: 77px;
+    width: 1250px;
+  }
+  body .greenhouse_asia .content .middle .chart img {
+    height: auto;
+    width: 1250px;
+  }
+  body .greenhouse_asia .content .middle .city {
+    margin-top: 38px;
+  }
+  body .greenhouse_asia .content .middle .city a img {
+    height: auto;
+    margin-left: 31px;
+    top: 4.6px;
+    width: 31px;
+  }
+  body .greenhouse_asia .content .middle .city h2 {
+    font-size: 56px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading h1 {
+    font-size: 100px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading h1 {
+    font-size: 100px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading h1 {
+    font-size: 100px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .first {
+    margin-top: 77px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h1 {
+    font-size: 75px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h2 {
+    font-size: 56px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h3 {
+    font-size: 46px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .value {
+    margin-top: 53px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity {
+    display: none;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .first {
+    margin-top: 77px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h1 {
+    font-size: 75px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h2 {
+    font-size: 56px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h3 {
+    font-size: 46px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .value {
+    margin-top: 53px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .first {
+    margin-top: 77px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h1 {
+    font-size: 75px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h2 {
+    font-size: 56px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h3 {
+    font-size: 46px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .value {
+    margin-top: 53px;
+  }
+  body .greenhouse_usa .content .left .comparative {
+    bottom: 77px;
+  }
+  body .greenhouse_usa .content .left h6 {
+    font-size: 27px;
+    margin-top: 77px;
+  }
+  body .greenhouse_usa .content .left .navbar .menu a {
+    font-size: 37px;
+  }
+  body .greenhouse_usa .content .middle .chart {
+    border-radius: 22px;
+    height: 633px;
+    margin-top: 77px;
+    width: 1250px;
+  }
+  body .greenhouse_usa .content .middle .chart img {
+    height: auto;
+    width: 1250px;
+  }
+  body .greenhouse_usa .content .middle .city {
+    margin-top: 38px;
+  }
+  body .greenhouse_usa .content .middle .city a img {
+    height: auto;
+    margin-left: 31px;
+    top: 4.6px;
+    width: 31px;
+  }
+  body .greenhouse_usa .content .middle .city h2 {
+    font-size: 56px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading a img {
+    height: auto;
+    margin-left: 38px;
+    top: 10.8px;
+    width: 53px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading h1 {
+    font-size: 100px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .first {
+    margin-top: 77px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h1 {
+    font-size: 75px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h2 {
+    font-size: 56px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h3 {
+    font-size: 46px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .value {
+    margin-top: 53px;
+  }
+}
+
+@media (min-width: 3001px) and (max-width: 3750px) {
+  body .dashboard_asia .content .left .comparative {
+    bottom: 96px;
+  }
+  body .dashboard_asia .content .left h6 {
+    font-size: 33px;
+    margin-top: 96px;
+  }
+  body .dashboard_asia .content .left .navbar .menu a {
+    font-size: 46px;
+    padding: 19.5px;
+  }
+  body .dashboard_asia .content .middle .chart {
+    border-radius: 27px;
+    height: 791px;
+    margin-top: 96px;
+    width: 1560px;
+  }
+  body .dashboard_asia .content .middle .chart img {
+    height: auto;
+    width: 1560px;
+  }
+  body .dashboard_asia .content .middle .city {
+    margin-top: 47px;
+  }
+  body .dashboard_asia .content .middle .city a img {
+    height: auto;
+    margin-left: 38px;
+    top: 5.7px;
+    width: 38px;
+  }
+  body .dashboard_asia .content .middle .city h2 {
+    font-size: 70px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading h1 {
+    font-size: 125px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading h1 {
+    font-size: 125px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading h1 {
+    font-size: 125px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .first {
+    margin-top: 96px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h1 {
+    font-size: 93px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h2 {
+    font-size: 70px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h3 {
+    font-size: 57px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .value {
+    margin-top: 66px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .first {
+    margin-top: 96px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h1 {
+    font-size: 93px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h2 {
+    font-size: 70px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h3 {
+    font-size: 57px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .value {
+    margin-top: 66px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .first {
+    margin-top: 96px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h1 {
+    font-size: 93px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h2 {
+    font-size: 70px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h3 {
+    font-size: 57px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .value {
+    margin-top: 66px;
+  }
+  body .dashboard_europe .content .left .comparative {
+    bottom: 96px;
+  }
+  body .dashboard_europe .content .left h6 {
+    font-size: 33px;
+    margin-top: 96px;
+  }
+  body .dashboard_europe .content .left .navbar .menu a {
+    font-size: 46px;
+    padding: 19.5px;
+  }
+  body .dashboard_europe .content .middle .chart {
+    border-radius: 27px;
+    height: 791px;
+    margin-top: 96px;
+    width: 1560px;
+  }
+  body .dashboard_europe .content .middle .chart img {
+    height: auto;
+    width: 1560px;
+  }
+  body .dashboard_europe .content .middle .city {
+    margin-top: 47px;
+  }
+  body .dashboard_europe .content .middle .city a img {
+    height: auto;
+    margin-left: 38px;
+    top: 5.7px;
+    width: 38px;
+  }
+  body .dashboard_europe .content .middle .city h2 {
+    font-size: 70px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading h1 {
+    font-size: 125px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading h1 {
+    font-size: 125px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading h1 {
+    font-size: 125px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .first {
+    margin-top: 96px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h1 {
+    font-size: 93px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h2 {
+    font-size: 70px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h3 {
+    font-size: 57px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .value {
+    margin-top: 66px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .first {
+    margin-top: 96px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h1 {
+    font-size: 93px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h2 {
+    font-size: 70px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h3 {
+    font-size: 57px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .value {
+    margin-top: 66px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .first {
+    margin-top: 96px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h1 {
+    font-size: 93px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h2 {
+    font-size: 70px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h3 {
+    font-size: 57px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .value {
+    margin-top: 66px;
+  }
+  body .dashboard_usa .content .left .comparative {
+    bottom: 96px;
+  }
+  body .dashboard_usa .content .left h6 {
+    font-size: 33px;
+    margin-top: 96px;
+  }
+  body .dashboard_usa .content .left .navbar .menu a {
+    font-size: 46px;
+    padding: 19.5px;
+  }
+  body .dashboard_usa .content .middle .chart {
+    border-radius: 27px;
+    height: 791px;
+    margin-top: 96px;
+    width: 1560px;
+  }
+  body .dashboard_usa .content .middle .chart img {
+    height: auto;
+    width: 1560px;
+  }
+  body .dashboard_usa .content .middle .city {
+    margin-top: 47px;
+  }
+  body .dashboard_usa .content .middle .city a img {
+    height: auto;
+    margin-left: 38px;
+    top: 5.7px;
+    width: 38px;
+  }
+  body .dashboard_usa .content .middle .city h2 {
+    font-size: 70px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading h1 {
+    font-size: 125px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading h1 {
+    font-size: 125px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading h1 {
+    font-size: 125px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .first {
+    margin-top: 96px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h1 {
+    font-size: 93px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h2 {
+    font-size: 70px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h3 {
+    font-size: 57px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .value {
+    margin-top: 66px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .first {
+    margin-top: 96px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h1 {
+    font-size: 93px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h2 {
+    font-size: 70px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h3 {
+    font-size: 57px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .value {
+    margin-top: 66px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .first {
+    margin-top: 96px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h1 {
+    font-size: 125px;
+    font-size: 93px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h2 {
+    font-size: 70px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h3 {
+    font-size: 57px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .value {
+    margin-top: 66px;
+  }
+  body .greenhouse_asia .content .left .comparative {
+    bottom: 96px;
+  }
+  body .greenhouse_asia .content .left h6 {
+    font-size: 33px;
+    margin-top: 96px;
+  }
+  body .greenhouse_asia .content .left .navbar .menu a {
+    font-size: 46px;
+    padding: 19.5px;
+  }
+  body .greenhouse_asia .content .middle .chart {
+    border-radius: 27px;
+    height: 791px;
+    margin-top: 96px;
+    width: 1560px;
+  }
+  body .greenhouse_asia .content .middle .chart img {
+    height: auto;
+    width: 1560px;
+  }
+  body .greenhouse_asia .content .middle .city {
+    margin-top: 47px;
+  }
+  body .greenhouse_asia .content .middle .city a img {
+    height: auto;
+    margin-left: 38px;
+    top: 5.7px;
+    width: 38px;
+  }
+  body .greenhouse_asia .content .middle .city h2 {
+    font-size: 70px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading h1 {
+    font-size: 125px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading h1 {
+    font-size: 125px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading h1 {
+    font-size: 125px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .first {
+    margin-top: 96px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h1 {
+    font-size: 93px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h2 {
+    font-size: 70px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h3 {
+    font-size: 57px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .value {
+    margin-top: 66px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity {
+    display: none;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .first {
+    margin-top: 96px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h1 {
+    font-size: 93px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h2 {
+    font-size: 70px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h3 {
+    font-size: 57px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .value {
+    margin-top: 66px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .first {
+    margin-top: 96px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h1 {
+    font-size: 93px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h2 {
+    font-size: 70px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h3 {
+    font-size: 57px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .value {
+    margin-top: 66px;
+  }
+  body .greenhouse_usa .content .left .comparative {
+    bottom: 96px;
+  }
+  body .greenhouse_usa .content .left h6 {
+    font-size: 33px;
+    margin-top: 96px;
+  }
+  body .greenhouse_usa .content .left .navbar .menu a {
+    font-size: 46px;
+  }
+  body .greenhouse_usa .content .middle .chart {
+    border-radius: 27px;
+    height: 791px;
+    margin-top: 96px;
+    width: 1560px;
+  }
+  body .greenhouse_usa .content .middle .chart img {
+    height: auto;
+    width: 1560px;
+  }
+  body .greenhouse_usa .content .middle .city {
+    margin-top: 47px;
+  }
+  body .greenhouse_usa .content .middle .city a img {
+    height: auto;
+    margin-left: 38px;
+    top: 5.7px;
+    width: 38px;
+  }
+  body .greenhouse_usa .content .middle .city h2 {
+    font-size: 70px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading a img {
+    height: auto;
+    margin-left: 47px;
+    top: 13.5px;
+    width: 66px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading h1 {
+    font-size: 125px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .first {
+    margin-top: 96px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h1 {
+    font-size: 93px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h2 {
+    font-size: 70px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h3 {
+    font-size: 57px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .value {
+    margin-top: 66px;
+  }
+}
+
+@media (min-width: 3751px) {
+  body .dashboard_asia .content .left .comparative {
+    bottom: 120px;
+  }
+  body .dashboard_asia .content .left h6 {
+    font-size: 41px;
+    margin-top: 120px;
+  }
+  body .dashboard_asia .content .left .navbar .menu a {
+    font-size: 57px;
+    padding: 24.3px;
+  }
+  body .dashboard_asia .content .middle .chart {
+    border-radius: 33px;
+    height: 989px;
+    margin-top: 120px;
+    width: 1950px;
+  }
+  body .dashboard_asia .content .middle .chart img {
+    height: auto;
+    width: 1950px;
+  }
+  body .dashboard_asia .content .middle .city {
+    margin-top: 58px;
+  }
+  body .dashboard_asia .content .middle .city a img {
+    height: auto;
+    margin-left: 47px;
+    top: 7.1px;
+    width: 47px;
+  }
+  body .dashboard_asia .content .middle .city h2 {
+    font-size: 87px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .dashboard_asia .content .middle .info_firstCity .heading h1 {
+    font-size: 156px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .dashboard_asia .content .middle .info_secondCity .heading h1 {
+    font-size: 156px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .dashboard_asia .content .middle .info_thirdCity .heading h1 {
+    font-size: 156px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .first {
+    margin-top: 120px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h1 {
+    font-size: 116px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h2 {
+    font-size: 87px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity h3 {
+    font-size: 71px;
+  }
+  body .dashboard_asia .content .right .valuesFirstCity .value {
+    margin-top: 82px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .first {
+    margin-top: 120px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h1 {
+    font-size: 116px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h2 {
+    font-size: 87px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity h3 {
+    font-size: 71px;
+  }
+  body .dashboard_asia .content .right .valuesSecondCity .value {
+    margin-top: 82px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .first {
+    margin-top: 120px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h1 {
+    font-size: 116px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h2 {
+    font-size: 87px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity h3 {
+    font-size: 71px;
+  }
+  body .dashboard_asia .content .right .valuesThirdCity .value {
+    margin-top: 82px;
+  }
+  body .dashboard_europe .content .left .comparative {
+    bottom: 120px;
+  }
+  body .dashboard_europe .content .left h6 {
+    font-size: 41px;
+    margin-top: 120px;
+  }
+  body .dashboard_europe .content .left .navbar .menu a {
+    font-size: 57px;
+    padding: 24.3px;
+  }
+  body .dashboard_europe .content .middle .chart {
+    border-radius: 33px;
+    height: 989px;
+    margin-top: 120px;
+    width: 1950px;
+  }
+  body .dashboard_europe .content .middle .chart img {
+    height: auto;
+    width: 1950px;
+  }
+  body .dashboard_europe .content .middle .city {
+    margin-top: 58px;
+  }
+  body .dashboard_europe .content .middle .city a img {
+    height: auto;
+    margin-left: 47px;
+    top: 7.1px;
+    width: 47px;
+  }
+  body .dashboard_europe .content .middle .city h2 {
+    font-size: 87px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .dashboard_europe .content .middle .info_firstCity .heading h1 {
+    font-size: 156px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .dashboard_europe .content .middle .info_secondCity .heading h1 {
+    font-size: 156px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .dashboard_europe .content .middle .info_thirdCity .heading h1 {
+    font-size: 156px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .first {
+    margin-top: 120px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h1 {
+    font-size: 116px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h2 {
+    font-size: 87px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity h3 {
+    font-size: 71px;
+  }
+  body .dashboard_europe .content .right .valuesFirstCity .value {
+    margin-top: 82px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .first {
+    margin-top: 120px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h1 {
+    font-size: 116px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h2 {
+    font-size: 87px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity h3 {
+    font-size: 71px;
+  }
+  body .dashboard_europe .content .right .valuesSecondCity .value {
+    margin-top: 82px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .first {
+    margin-top: 120px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h1 {
+    font-size: 116px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h2 {
+    font-size: 87px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity h3 {
+    font-size: 71px;
+  }
+  body .dashboard_europe .content .right .valuesThirdCity .value {
+    margin-top: 82px;
+  }
+  body .dashboard_usa .content .left .comparative {
+    bottom: 120px;
+  }
+  body .dashboard_usa .content .left h6 {
+    font-size: 41px;
+    margin-top: 120px;
+  }
+  body .dashboard_usa .content .left .navbar .menu a {
+    font-size: 57px;
+    padding: 24.3px;
+  }
+  body .dashboard_usa .content .middle .chart {
+    border-radius: 33px;
+    height: 989px;
+    margin-top: 120px;
+    width: 1950px;
+  }
+  body .dashboard_usa .content .middle .chart img {
+    height: auto;
+    width: 1950px;
+  }
+  body .dashboard_usa .content .middle .city {
+    margin-top: 58px;
+  }
+  body .dashboard_usa .content .middle .city a img {
+    height: auto;
+    margin-left: 47px;
+    top: 7.1px;
+    width: 47px;
+  }
+  body .dashboard_usa .content .middle .city h2 {
+    font-size: 87px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .dashboard_usa .content .middle .info_firstCity .heading h1 {
+    font-size: 156px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .dashboard_usa .content .middle .info_secondCity .heading h1 {
+    font-size: 156px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .dashboard_usa .content .middle .info_thirdCity .heading h1 {
+    font-size: 156px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .first {
+    margin-top: 120px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h1 {
+    font-size: 116px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h2 {
+    font-size: 87px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity h3 {
+    font-size: 71px;
+  }
+  body .dashboard_usa .content .right .valuesFirstCity .value {
+    margin-top: 82px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .first {
+    margin-top: 120px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h1 {
+    font-size: 116px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h2 {
+    font-size: 87px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity h3 {
+    font-size: 71px;
+  }
+  body .dashboard_usa .content .right .valuesSecondCity .value {
+    margin-top: 82px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .first {
+    margin-top: 120px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h1 {
+    font-size: 156px;
+    font-size: 116px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h2 {
+    font-size: 87px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity h3 {
+    font-size: 71px;
+  }
+  body .dashboard_usa .content .right .valuesThirdCity .value {
+    margin-top: 82px;
+  }
+  body .greenhouse_asia .content .left .comparative {
+    bottom: 120px;
+  }
+  body .greenhouse_asia .content .left h6 {
+    font-size: 41px;
+    margin-top: 120px;
+  }
+  body .greenhouse_asia .content .left .navbar .menu a {
+    font-size: 57px;
+    padding: 24.3px;
+  }
+  body .greenhouse_asia .content .middle .chart {
+    border-radius: 33px;
+    height: 989px;
+    margin-top: 120px;
+    width: 1950px;
+  }
+  body .greenhouse_asia .content .middle .chart img {
+    height: auto;
+    width: 1950px;
+  }
+  body .greenhouse_asia .content .middle .city {
+    margin-top: 58px;
+  }
+  body .greenhouse_asia .content .middle .city a img {
+    height: auto;
+    margin-left: 47px;
+    top: 7.1px;
+    width: 47px;
+  }
+  body .greenhouse_asia .content .middle .city h2 {
+    font-size: 87px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .greenhouse_asia .content .middle .info_firstCity .heading h1 {
+    font-size: 156px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .greenhouse_asia .content .middle .info_secondCity .heading h1 {
+    font-size: 156px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .greenhouse_asia .content .middle .info_thirdCity .heading h1 {
+    font-size: 156px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .first {
+    margin-top: 120px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h1 {
+    font-size: 116px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h2 {
+    font-size: 87px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity h3 {
+    font-size: 71px;
+  }
+  body .greenhouse_asia .content .right .valuesFirstCity .value {
+    margin-top: 82px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity {
+    display: none;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .first {
+    margin-top: 120px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h1 {
+    font-size: 116px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h2 {
+    font-size: 87px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity h3 {
+    font-size: 71px;
+  }
+  body .greenhouse_asia .content .right .valuesSecondCity .value {
+    margin-top: 82px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .first {
+    margin-top: 120px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h1 {
+    font-size: 116px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h2 {
+    font-size: 87px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity h3 {
+    font-size: 71px;
+  }
+  body .greenhouse_asia .content .right .valuesThirdCity .value {
+    margin-top: 82px;
+  }
+  body .greenhouse_usa .content .left .comparative {
+    bottom: 120px;
+  }
+  body .greenhouse_usa .content .left h6 {
+    font-size: 41px;
+    margin-top: 120px;
+  }
+  body .greenhouse_usa .content .left .navbar .menu a {
+    font-size: 57px;
+  }
+  body .greenhouse_usa .content .middle .chart {
+    border-radius: 33px;
+    height: 989px;
+    margin-top: 120px;
+    width: 1950px;
+  }
+  body .greenhouse_usa .content .middle .chart img {
+    height: auto;
+    width: 1950px;
+  }
+  body .greenhouse_usa .content .middle .city {
+    margin-top: 58px;
+  }
+  body .greenhouse_usa .content .middle .city a img {
+    height: auto;
+    margin-left: 47px;
+    top: 7.1px;
+    width: 47px;
+  }
+  body .greenhouse_usa .content .middle .city h2 {
+    font-size: 87px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading a img {
+    height: auto;
+    margin-left: 58px;
+    top: 16.8px;
+    width: 82px;
+  }
+  body .greenhouse_usa .content .middle .info_NY .heading h1 {
+    font-size: 156px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .first {
+    margin-top: 120px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h1 {
+    font-size: 116px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h2 {
+    font-size: 87px;
+  }
+  body .greenhouse_usa .content .right .valuesNY h3 {
+    font-size: 71px;
+  }
+  body .greenhouse_usa .content .right .valuesNY .value {
+    margin-top: 82px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

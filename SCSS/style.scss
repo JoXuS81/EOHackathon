@@ -1,0 +1,5616 @@
+/* 
+
+TABLE OF CONTENTS
+
+1. Fonts
+ 1.1 Jura
+ 1.2 Megrim
+ 1.3 Rajdhani
+ 1.4 Raleway Dots
+ 1.5 Text Me One
+2. Mixins
+3. Variables
+4. Body 
+ 4.1 Content 
+  4.1.1 Section Blog 
+  4.1.2 Section Contact 
+  4.1.3 Section Earphones
+  4.1.4 Section Footer
+  4.1.5 Section React
+  4.1.6 Section Tools
+  4.1.7 Section UX/UI
+  4.1.8 Section Works
+  4.1.9 Work with Different Screen Sizes
+
+*/
+
+
+//Fonts
+@font-face {
+    font-family:advent;
+    src:url("../Fonts/Advent/AdventPro-Regular.woff");
+}
+
+// Barlow
+@font-face {
+    font-family:bsc;
+    src:url("../Fonts/Barlow/BarlowSemiCondensed-Regular.ttf");
+}
+
+// Abel
+@font-face {
+    font-family:abel;
+    src:url("../Fonts/Abel/Abel-Regular.ttf");
+}
+
+
+// Mixins
+@mixin h1 {
+    color:$white;
+    font-family:bsc;
+    font-size:64px;
+    margin:0;
+    padding:0;
+}
+@mixin h2 {
+    color:$white;
+    font-family:advent;
+    font-size:36px;
+    margin:0;
+}
+@mixin h3 {
+    color:$white;
+    font-family:advent;
+    font-size:30px;
+}
+@mixin h4 {
+    color:$white;
+    font-size:24px;
+}
+@mixin h5 {
+    font-size:20px;
+}
+
+@mixin h1_2400 {
+    font-size:80px;
+}
+@mixin h1_3000 {
+    font-size:100px;
+}
+@mixin h1_3750 {
+    font-size:125px;
+}
+@mixin h1_4690 {
+    font-size:156px;
+}
+@mixin h2_2400 {
+    font-size:45px;
+}
+@mixin h2_3000 {
+    font-size:56px;
+}
+@mixin h2_3750 {
+    font-size:70px;
+}
+@mixin h2_4690 {
+    font-size:87px;
+}
+@mixin h3_2400 {
+    font-size:37px;
+}
+@mixin h3_3000 {
+    font-size:46px;
+}
+@mixin h3_3750 {
+    font-size:57px;
+}
+@mixin h3_4690 {
+    font-size:71px;
+}
+@mixin h4_2000 {
+    font-size:31px;
+}
+@mixin h4_2500 {
+    font-size:38px;
+}
+@mixin h4_3125 {
+    font-size:47px;
+}
+@mixin h4_3850 {
+    font-size:58px;
+}
+@mixin h5_2000 {
+    font-size:25px;
+}
+@mixin h5_2500 {
+    font-size:31px;
+}
+@mixin h5_3125 {
+    font-size:38px;
+}
+@mixin h5_3850 {
+    font-size:47px;
+}
+
+
+// Variables
+$black:#000000;
+$blog_dark:#272828;
+$bluegreen:#4fcab0;
+$bluegreen_2:#67ceb3;
+$bluegreen_3:#79d3b9;
+$bluegreendark:#45685e;
+$bluegreenlight:#8bd8c0;
+$bluegreenlight2:#a4e0cc;
+$bluegreenlight3:#c1eadb;
+$bluegreentight:#42a58d;
+$chart:#585858;
+$contact:#0c0c0c;
+$dark:#333030;
+$dark2:#353535;
+$education_dark:#232626;
+$grey:#e1dbdb;
+$greylight:#dbd7d7;
+$greylighter:#efefef;
+$hamburger_background:rgba(0,0,0,0.6);
+$hover:#51D0EC;
+$left:#212121;
+$light:#ccc;
+$right:#252525;
+$white:#ffffff;
+
+
+/* Body */
+body {
+    background:url("../Images/Body/Earth.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    overflow-x:hidden;
+    -webkit-background-size:cover;
+    .dashboard_asia {
+        background:$dark2;
+        height:100vh;
+        opacity:0.95;
+        width:100vw;
+        .content {
+            height:100%;
+            width:100%;
+            .left {
+                background:$left;
+                width:10%;
+                .comparative {
+                    bottom:50px;
+                    display:flex;
+                    justify-content:center;
+                    position:absolute;
+                    width:10%;
+                    h6 {
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                h6 {
+                    color:$white;
+                    font-family:abel;
+                    font-size:18px;
+                    margin-top:50px;
+                    text-align:center;
+                }
+                .navbar {
+                    display:flex;
+                    height:100%;
+                    justify-content:center;
+                    position:absolute;
+                    top:0;
+                    width:10%;
+                    .menu {
+                        width:100%;
+                        a {
+                            color:$white;
+                            display:block;
+                            font-family:advent;
+                            font-size:24px;
+                            margin:0;
+                            padding:10px;
+                            text-align:center;
+                            text-decoration:none;
+                            width:100%;
+                            &:hover {
+                                background:$hover;
+                            }
+                        }
+                        .acti {
+                            background:$hover;
+                        }
+                    }
+                }
+            }
+            .middle {
+                width:60%;
+                .chart {
+                    background:$hamburger_background;
+                    border-radius:15px;
+                    height:405px;
+                    margin-top:50px;
+                    width:800px;
+                }
+                .city {
+                    align-items:center;
+                    display:flex;
+                    margin-top:25px;
+                    a {
+                        img {
+                            display:inline-block;
+                            margin-left:20px;
+                            position:relative;
+                            top:3px;
+                        }
+                    }
+                    h2 {
+                        @include h2;
+                        display:inline-block;
+                        font-weight:bold;
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                .info_firstCity {
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+                .info_secondCity {
+                    display:none;
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+                .info_thirdCity {
+                    display:none;
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+            }
+            .right {
+                background:$right;
+                width:30%;
+                .valuesFirstCity {
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+                .valuesSecondCity {
+                    display:none;
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+                .valuesThirdCity {
+                    display:none;
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+            }
+        }
+    }
+    .dashboard_europe {
+        background:$dark2;
+        display:none;
+        height:100vh;
+        opacity:0.95;
+        width:100vw;
+        .content {
+            height:100%;
+            width:100%;
+            .left {
+                background:$left;
+                width:10%;
+                .comparative {
+                    bottom:50px;
+                    display:flex;
+                    justify-content:center;
+                    position:absolute;
+                    width:10%;
+                    h6 {
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                h6 {
+                    color:$white;
+                    font-family:abel;
+                    font-size:18px;
+                    margin-top:50px;
+                    text-align:center;
+                }
+                .navbar {
+                    display:flex;
+                    height:100%;
+                    justify-content:center;
+                    position:absolute;
+                    top:0;
+                    width:10%;
+                    .menu {
+                        width:100%;
+                        a {
+                            color:$white;
+                            display:block;
+                            font-family:advent;
+                            font-size:24px;
+                            margin:0;
+                            padding:10px;
+                            text-align:center;
+                            text-decoration:none;
+                            width:100%;
+                            &:hover {
+                                background:$hover;
+                            }
+                        }
+                        .acti {
+                            background:$hover;
+                        }
+                    }
+                }
+            }
+            .middle {
+                width:60%;
+                .chart {
+                    background:$hamburger_background;
+                    border-radius:15px;
+                    height:405px;
+                    margin-top:50px;
+                    width:800px;
+                }
+                .city {
+                    align-items:center;
+                    display:flex;
+                    margin-top:25px;
+                    a {
+                        img {
+                            display:inline-block;
+                            margin-left:20px;
+                            position:relative;
+                            top:3px;
+                        }
+                    }
+                    h2 {
+                        @include h2;
+                        display:inline-block;
+                        font-weight:bold;
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                .info_firstCity {
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+                .info_secondCity {
+                    display:none;
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+                .info_thirdCity {
+                    display:none;
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+            }
+            .right {
+                background:$right;
+                width:30%;
+                .valuesFirstCity {
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+                .valuesSecondCity {
+                    display:none;
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+                .valuesThirdCity {
+                    display:none;
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+            }
+        }
+    }
+    .dashboard_usa {
+        background:$dark2;
+        display:none;
+        height:100vh;
+        opacity:0.95;
+        width:100vw;
+        .content {
+            height:100%;
+            width:100%;
+            .left {
+                background:$left;
+                width:10%;
+                .comparative {
+                    bottom:50px;
+                    display:flex;
+                    justify-content:center;
+                    position:absolute;
+                    width:10%;
+                    h6 {
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                h6 {
+                    color:$white;
+                    font-family:abel;
+                    font-size:18px;
+                    margin-top:50px;
+                    text-align:center;
+                }
+                .navbar {
+                    display:flex;
+                    height:100%;
+                    justify-content:center;
+                    position:absolute;
+                    top:0;
+                    width:10%;
+                    .menu {
+                        width:100%;
+                        a {
+                            color:$white;
+                            display:block;
+                            font-family:advent;
+                            font-size:24px;
+                            margin:0;
+                            padding:10px;
+                            text-align:center;
+                            text-decoration:none;
+                            width:100%;
+                            &:hover {
+                                background:$hover;
+                            }
+                        }
+                        .acti {
+                            background:$hover;
+                        }
+                    }
+                }
+            }
+            .middle {
+                width:60%;
+                .chart {
+                    background:$hamburger_background;
+                    border-radius:15px;
+                    height:405px;
+                    margin-top:50px;
+                    width:800px;
+                }
+                .city {
+                    align-items:center;
+                    display:flex;
+                    margin-top:25px;
+                    a {
+                        img {
+                            display:inline-block;
+                            margin-left:20px;
+                            position:relative;
+                            top:3px;
+                        }
+                    }
+                    h2 {
+                        @include h2;
+                        display:inline-block;
+                        font-weight:bold;
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                .info_firstCity {
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+                .info_secondCity {
+                    display:none;
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+                .info_thirdCity {
+                    display:none;
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+            }
+            .right {
+                background:$right;
+                width:30%;
+                .valuesFirstCity {
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+                .valuesSecondCity {
+                    display:none;
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+                .valuesThirdCity {
+                    display:none;
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .greenhouse_asia {
+        background:$dark2;
+        display:none;
+        height:100vh;
+        opacity:0.95;
+        width:100vw;
+        .content {
+            height:100%;
+            width:100%;
+            .left {
+                background:$left;
+                width:10%;
+                .comparative {
+                    bottom:50px;
+                    display:flex;
+                    justify-content:center;
+                    position:absolute;
+                    width:10%;
+                    h6 {
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                h6 {
+                    color:$white;
+                    font-family:abel;
+                    font-size:18px;
+                    margin-top:50px;
+                    text-align:center;
+                }
+                .navbar {
+                    display:flex;
+                    height:100%;
+                    justify-content:center;
+                    position:absolute;
+                    top:0;
+                    width:10%;
+                    .menu {
+                        width:100%;
+                        a {
+                            color:$white;
+                            display:block;
+                            font-family:advent;
+                            font-size:24px;
+                            margin:0;
+                            padding:10px;
+                            text-align:center;
+                            text-decoration:none;
+                            width:100%;
+                            &:hover {
+                                background:$hover;
+                            }
+                        }
+                        .acti {
+                            background:$hover;
+                        }
+                    }
+                }
+            }
+            .middle {
+                width:60%;
+                .chart {
+                    background:$hamburger_background;
+                    border-radius:15px;
+                    height:405px;
+                    margin-top:50px;
+                    width:800px;
+                }
+                .city {
+                    align-items:center;
+                    display:flex;
+                    margin-top:25px;
+                    a {
+                        img {
+                            display:inline-block;
+                            margin-left:20px;
+                            position:relative;
+                            top:3px;
+                        }
+                    }
+                    h2 {
+                        @include h2;
+                        display:inline-block;
+                        font-weight:bold;
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                .info_firstCity {
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+                .info_secondCity {
+                    display:none;
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            cursor:pointer;
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+                .info_thirdCity {
+                    display:none;
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+            }
+            .right {
+                background:$right;
+                width:30%;
+                .valuesFirstCity {
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+                .valuesSecondCity {
+                    display:none;
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+                .valuesThirdCity {
+                    display:none;
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+            }
+        }
+    }
+    .greenhouse_usa {
+        background:$dark2;
+        display:none;
+        height:100vh;
+        opacity:0.95;
+        width:100vw;
+        .content {
+            height:100%;
+            width:100%;
+            .left {
+                background:$left;
+                width:10%;
+                .comparative {
+                    bottom:50px;
+                    display:flex;
+                    justify-content:center;
+                    position:absolute;
+                    width:10%;
+                    h6 {
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                h6 {
+                    color:$white;
+                    font-family:abel;
+                    font-size:18px;
+                    margin-top:50px;
+                    text-align:center;
+                }
+                .navbar {
+                    display:flex;
+                    height:100%;
+                    justify-content:center;
+                    position:absolute;
+                    top:0;
+                    width:10%;
+                    .menu {
+                        width:100%;
+                        a {
+                            color:$white;
+                            display:block;
+                            font-family:advent;
+                            font-size:24px;
+                            margin:0;
+                            padding:10px;
+                            text-align:center;
+                            text-decoration:none;
+                            width:100%;
+                            &:hover {
+                                background:$hover;
+                            }
+                        }
+                        .acti {
+                            background:$hover;
+                        }
+                    }
+                }
+            }
+            .middle {
+                width:60%;
+                .chart {
+                    background:$hamburger_background;
+                    border-radius:15px;
+                    height:405px;
+                    margin-top:50px;
+                    width:800px;
+                }
+                .city {
+                    align-items:center;
+                    display:flex;
+                    margin-top:25px;
+                    a {
+                        img {
+                            display:inline-block;
+                            margin-left:20px;
+                            position:relative;
+                            top:3px;
+                        }
+                    }
+                    h2 {
+                        @include h2;
+                        display:inline-block;
+                        font-weight:bold;
+                        margin:0;
+                        padding:0;
+                    }
+                }
+                .info_NY {
+                    .heading {
+                        align-items:center;
+                        display:flex;
+                        a {
+                            img {
+                                display:inline;
+                                margin-left:25px;
+                                position:relative;
+                                top:7px;
+                            }
+                        }
+                        h1 {
+                            @include h1;
+                            display:inline-block;
+                            font-weight:bold;
+                            margin:0;
+                            padding:0;
+                        }
+                    }
+                }
+            }
+            .right {
+                background:$right;
+                width:30%;
+                .valuesNY {
+                    .first {
+                        margin-top:50px;
+                    }
+                    h1 {
+                        @include h1;
+                        display:block;
+                        font-family:advent;
+                        font-size:48px;
+                    }
+                    h2 {
+                        @include h2;
+                        text-align:center;
+                    }
+                    h3 {
+                        @include h3;
+                        text-align:center;
+                    }
+                    .value {
+                        margin-top:35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Work with Different Screen Sizes
+@media (max-width:350px) {
+    body {
+        .dashboard_asia {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        display:flex;
+                        height:auto;
+                        justify-content:center;
+                        margin-bottom:40px;
+                        width:100%;
+                        img {
+                            height:auto;
+                            width:90%;
+                        }
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_europe {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        display:flex;
+                        height:auto;
+                        justify-content:center;
+                        margin-bottom:40px;
+                        width:100%;
+                        img {
+                            height:auto;
+                            width:90%;
+                        }
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_usa {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:90%;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_asia {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:90%;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_usa {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:90%;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_NY {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                            h1 {
+                                font-size:50px;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesNY {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                        h1 {
+                            font-size:40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:351px) and (max-width:650px) {
+    body {
+        .dashboard_asia {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        display:flex;
+                        height:auto;
+                        justify-content:center;
+                        margin-bottom:40px;
+                        width:100%;
+                        img {
+                            height:auto;
+                            width:90%;
+                        }
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_europe {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        display:flex;
+                        height:auto;
+                        justify-content:center;
+                        margin-bottom:40px;
+                        width:100%;
+                        img {
+                            height:auto;
+                            width:90%;
+                        }
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_usa {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:90%;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_asia {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:90%;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_usa {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:90%;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_NY {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesNY {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:651px) and (max-width:1199px) {
+    body {
+        .dashboard_asia {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:600px;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_europe {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:600px;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_usa {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:600px;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_asia {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:600px;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesFirstCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_usa {
+            height:initial;
+            .content {
+                height:initial;
+                .left {
+                    width:100%;
+                    .comparative {
+                        display:flex;
+                        justify-content:center;
+                        position:initial;
+                        width:100%;
+                        h6 {
+                            margin-bottom:15px;
+                        }
+                    }
+                    h6 {
+                        margin-top:15px;
+                    }
+                    .header_hamburger {
+                        visibility:visible;
+                    }
+                    .navbar {
+                        background:black;
+                        height:initial;
+                        margin-bottom:15px;
+                        margin-top:15px;
+                        padding:0;
+                        position:relative;
+                        width:100%;
+                        .menu {
+                            display:flex;
+                            justify-content:center;
+                            margin:0;
+                            padding:0;
+                            div {
+                                margin:0;
+                                padding:0;
+                                a {
+                                    margin:0;
+                                    padding:0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    width:100%;
+                    .chart {
+                        height:auto;
+                        margin-bottom:40px;
+                        width:600px;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_NY {
+                        margin-top:20px;
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .right {
+                    width:100%;
+                    .valuesNY {
+                        margin-top:20px;
+                        .bottom {
+                            margin-bottom:20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media(min-width:1200px) and (max-width:1500px) {
+    body {
+        .dashboard_asia {
+            .content {
+                .middle {
+                    .chart {
+                        height:auto;
+                        width:600px;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_europe {
+            .content {
+                .middle {
+                    .chart {
+                        height:auto;
+                        width:600px;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_usa {
+            .content {
+                .middle {
+                    .chart {
+                        height:auto;
+                        width:600px;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_asia {
+            .content {
+                .middle {
+                    .chart {
+                        height:auto;
+                        width:600px;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_firstCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_usa {
+            .content {
+                .middle {
+                    .chart {
+                        height:auto;
+                        width:600px;
+                    }
+                    .city {
+                        display:flex;
+                        justify-content:center;
+                    }
+                    .info_NY {
+                        .heading {
+                            display:flex;
+                            justify-content:center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:1921px) and (max-width:2400px) {
+    body {
+        .dashboard_asia {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:62px;
+                    }
+                    h6 {
+                        font-size:22px;
+                        margin-top:62px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:30px;
+                                padding:12.5px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:18px;
+                        height:506px;
+                        margin-top:62px;
+                        width:1000px;
+                        img {
+                            height:auto;
+                            width:1000px;
+                        }
+                    }
+                    .city {
+                        margin-top:31px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:25px;
+                                top:3.7px;
+                                width:25px;
+                            }
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_europe {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:62px;
+                    }
+                    h6 {
+                        font-size:22px;
+                        margin-top:62px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:30px;
+                                padding:12.5px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:18px;
+                        height:506px;
+                        margin-top:62px;
+                        width:1000px;
+                        img {
+                            height:auto;
+                            width:1000px;
+                        }
+                    }
+                    .city {
+                        margin-top:31px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:25px;
+                                top:3.7px;
+                                width:25px;
+                            }
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_usa {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:62px;
+                    }
+                    h6 {
+                        font-size:22px;
+                        margin-top:62px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:30px;
+                                padding:12.5px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:18px;
+                        height:506px;
+                        margin-top:62px;
+                        width:1000px;
+                        img {
+                            height:auto;
+                            width:1000px;
+                        }
+                    }
+                    .city {
+                        margin-top:31px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:25px;
+                                top:3.7px;
+                                width:25px;
+                            }
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            @include h1_2400;
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                }
+            }
+        }
+    
+    
+        .greenhouse_asia {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:62px;
+                    }
+                    h6 {
+                        font-size:22px;
+                        margin-top:62px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:30px;
+                                padding:12.5px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:18px;
+                        height:506px;
+                        margin-top:62px;
+                        width:1000px;
+                        img {
+                            height:auto;
+                            width:1000px;
+                        }
+                    }
+                    .city {
+                        margin-top:31px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:25px;
+                                top:3.7px;
+                                width:25px;
+                            }
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        display:none;
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_usa {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:62px;
+                    }
+                    h6 {
+                        font-size:22px;
+                        margin-top:62px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:30px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:18px;
+                        height:506px;
+                        margin-top:62px;
+                        width:1000px;
+                        img {
+                            height:auto;
+                            width:1000px;
+                        }
+                    }
+                    .city {
+                        margin-top:31px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:25px;
+                                top:3.7px;
+                                width:25px;
+                            }
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                    }
+                    .info_NY {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:31px;
+                                    top:8.7px;
+                                    width:43px;
+                                }
+                            }
+                            h1 {
+                                @include h1_2400;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesNY {
+                        .first {
+                            margin-top:62px;
+                        }
+                        h1 {
+                            font-size:60px;
+                        }
+                        h2 {
+                            @include h2_2400;
+                        }
+                        h3 {
+                            @include h3_2400;
+                        }
+                        .value {
+                            margin-top:43px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:2401px) and (max-width:3000px) {
+    body {
+        .dashboard_asia {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:77px;
+                    }
+                    h6 {
+                        font-size:27px;
+                        margin-top:77px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:37px;
+                                padding:15.6px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:22px;
+                        height:633px;
+                        margin-top:77px;
+                        width:1250px;
+                        img {
+                            height:auto;
+                            width:1250px;
+                        }
+                    }
+                    .city {
+                        margin-top:38px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:31px;
+                                top:4.6px;
+                                width:31px;
+                            }
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_europe {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:77px;
+                    }
+                    h6 {
+                        font-size:27px;
+                        margin-top:77px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:37px;
+                                padding:15.6px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:22px;
+                        height:633px;
+                        margin-top:77px;
+                        width:1250px;
+                        img {
+                            height:auto;
+                            width:1250px;
+                        }
+                    }
+                    .city {
+                        margin-top:38px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:31px;
+                                top:4.6px;
+                                width:31px;
+                            }
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_usa {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:77px;
+                    }
+                    h6 {
+                        font-size:27px;
+                        margin-top:77px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:37px;
+                                padding:15.6px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:22px;
+                        height:633px;
+                        margin-top:77px;
+                        width:1250px;
+                        img {
+                            height:auto;
+                            width:1250px;
+                        }
+                    }
+                    .city {
+                        margin-top:38px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:31px;
+                                top:4.6px;
+                                width:31px;
+                            }
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            @include h1_3000;
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                }
+            }
+        }
+    
+    
+        .greenhouse_asia {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:77px;
+                    }
+                    h6 {
+                        font-size:27px;
+                        margin-top:77px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:37px;
+                                padding:15.6px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:22px;
+                        height:633px;
+                        margin-top:77px;
+                        width:1250px;
+                        img {
+                            height:auto;
+                            width:1250px;
+                        }
+                    }
+                    .city {
+                        margin-top:38px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:31px;
+                                top:4.6px;
+                                width:31px;
+                            }
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        display:none;
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_usa {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:77px;
+                    }
+                    h6 {
+                        font-size:27px;
+                        margin-top:77px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:37px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:22px;
+                        height:633px;
+                        margin-top:77px;
+                        width:1250px;
+                        img {
+                            height:auto;
+                            width:1250px;
+                        }
+                    }
+                    .city {
+                        margin-top:38px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:31px;
+                                top:4.6px;
+                                width:31px;
+                            }
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                    }
+                    .info_NY {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:38px;
+                                    top:10.8px;
+                                    width:53px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3000;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesNY {
+                        .first {
+                            margin-top:77px;
+                        }
+                        h1 {
+                            font-size:75px;
+                        }
+                        h2 {
+                            @include h2_3000;
+                        }
+                        h3 {
+                            @include h3_3000;
+                        }
+                        .value {
+                            margin-top:53px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3001px) and (max-width:3750px) {
+    body {
+        .dashboard_asia {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:96px;
+                    }
+                    h6 {
+                        font-size:33px;
+                        margin-top:96px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:46px;
+                                padding:19.5px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:27px;
+                        height:791px;
+                        margin-top:96px;
+                        width:1560px;
+                        img {
+                            height:auto;
+                            width:1560px;
+                        }
+                    }
+                    .city {
+                        margin-top:47px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:38px;
+                                top:5.7px;
+                                width:38px;
+                            }
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_europe {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:96px;
+                    }
+                    h6 {
+                        font-size:33px;
+                        margin-top:96px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:46px;
+                                padding:19.5px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:27px;
+                        height:791px;
+                        margin-top:96px;
+                        width:1560px;
+                        img {
+                            height:auto;
+                            width:1560px;
+                        }
+                    }
+                    .city {
+                        margin-top:47px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:38px;
+                                top:5.7px;
+                                width:38px;
+                            }
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_usa {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:96px;
+                    }
+                    h6 {
+                        font-size:33px;
+                        margin-top:96px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:46px;
+                                padding:19.5px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:27px;
+                        height:791px;
+                        margin-top:96px;
+                        width:1560px;
+                        img {
+                            height:auto;
+                            width:1560px;
+                        }
+                    }
+                    .city {
+                        margin-top:47px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:38px;
+                                top:5.7px;
+                                width:38px;
+                            }
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            @include h1_3750;
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                }
+            }
+        }
+    
+    
+        .greenhouse_asia {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:96px;
+                    }
+                    h6 {
+                        font-size:33px;
+                        margin-top:96px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:46px;
+                                padding:19.5px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:27px;
+                        height:791px;
+                        margin-top:96px;
+                        width:1560px;
+                        img {
+                            height:auto;
+                            width:1560px;
+                        }
+                    }
+                    .city {
+                        margin-top:47px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:38px;
+                                top:5.7px;
+                                width:38px;
+                            }
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        display:none;
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_usa {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:96px;
+                    }
+                    h6 {
+                        font-size:33px;
+                        margin-top:96px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:46px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:27px;
+                        height:791px;
+                        margin-top:96px;
+                        width:1560px;
+                        img {
+                            height:auto;
+                            width:1560px;
+                        }
+                    }
+                    .city {
+                        margin-top:47px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:38px;
+                                top:5.7px;
+                                width:38px;
+                            }
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                    }
+                    .info_NY {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:47px;
+                                    top:13.5px;
+                                    width:66px;
+                                }
+                            }
+                            h1 {
+                                @include h1_3750;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesNY {
+                        .first {
+                            margin-top:96px;
+                        }
+                        h1 {
+                            font-size:93px;
+                        }
+                        h2 {
+                            @include h2_3750;
+                        }
+                        h3 {
+                            @include h3_3750;
+                        }
+                        .value {
+                            margin-top:66px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width:3751px) {
+    body {
+        .dashboard_asia {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:120px;
+                    }
+                    h6 {
+                        font-size:41px;
+                        margin-top:120px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:57px;
+                                padding:24.3px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:33px;
+                        height:989px;
+                        margin-top:120px;
+                        width:1950px;
+                        img {
+                            height:auto;
+                            width:1950px;
+                        }
+                    }
+                    .city {
+                        margin-top:58px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:47px;
+                                top:7.1px;
+                                width:47px;
+                            }
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_europe {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:120px;
+                    }
+                    h6 {
+                        font-size:41px;
+                        margin-top:120px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:57px;
+                                padding:24.3px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:33px;
+                        height:989px;
+                        margin-top:120px;
+                        width:1950px;
+                        img {
+                            height:auto;
+                            width:1950px;
+                        }
+                    }
+                    .city {
+                        margin-top:58px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:47px;
+                                top:7.1px;
+                                width:47px;
+                            }
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                }
+            }
+        }
+        .dashboard_usa {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:120px;
+                    }
+                    h6 {
+                        font-size:41px;
+                        margin-top:120px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:57px;
+                                padding:24.3px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:33px;
+                        height:989px;
+                        margin-top:120px;
+                        width:1950px;
+                        img {
+                            height:auto;
+                            width:1950px;
+                        }
+                    }
+                    .city {
+                        margin-top:58px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:47px;
+                                top:7.1px;
+                                width:47px;
+                            }
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            @include h1_4690;
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                }
+            }
+        }
+    
+    
+        .greenhouse_asia {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:120px;
+                    }
+                    h6 {
+                        font-size:41px;
+                        margin-top:120px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:57px;
+                                padding:24.3px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:33px;
+                        height:989px;
+                        margin-top:120px;
+                        width:1950px;
+                        img {
+                            height:auto;
+                            width:1950px;
+                        }
+                    }
+                    .city {
+                        margin-top:58px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:47px;
+                                top:7.1px;
+                                width:47px;
+                            }
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                    }
+                    .info_firstCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                    .info_secondCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                    .info_thirdCity {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesFirstCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                    .valuesSecondCity {
+                        display:none;
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                    .valuesThirdCity {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                }
+            }
+        }
+        .greenhouse_usa {
+            .content {
+                .left {
+                    .comparative {
+                        bottom:120px;
+                    }
+                    h6 {
+                        font-size:41px;
+                        margin-top:120px;
+                    }
+                    .navbar {
+                        .menu {
+                            a {
+                                font-size:57px;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    .chart {
+                        border-radius:33px;
+                        height:989px;
+                        margin-top:120px;
+                        width:1950px;
+                        img {
+                            height:auto;
+                            width:1950px;
+                        }
+                    }
+                    .city {
+                        margin-top:58px;
+                        a {
+                            img {
+                                height:auto;
+                                margin-left:47px;
+                                top:7.1px;
+                                width:47px;
+                            }
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                    }
+                    .info_NY {
+                        .heading {
+                            a {
+                                img {
+                                    height:auto;
+                                    margin-left:58px;
+                                    top:16.8px;
+                                    width:82px;
+                                }
+                            }
+                            h1 {
+                                @include h1_4690;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    .valuesNY {
+                        .first {
+                            margin-top:120px;
+                        }
+                        h1 {
+                            font-size:116px;
+                        }
+                        h2 {
+                            @include h2_4690;
+                        }
+                        h3 {
+                            @include h3_4690;
+                        }
+                        .value {
+                            margin-top:82px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
